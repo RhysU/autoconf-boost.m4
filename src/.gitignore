@@ -1,0 +1,11 @@
+/config.h
+/config.h.in
+/.deps
+/helloworld
+/*.log
+/Makefile
+/Makefile.in
+/stamp-h1
+/.*.swp
+/test_example
+/*.trs

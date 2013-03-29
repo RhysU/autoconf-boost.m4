@@ -1,0 +1,41 @@
+Build Procedure
+===============
+
+Introduction
+------------
+
+This document describes how to build this source code on Unix-like systems.
+
+
+Dependencies
+------------
+
+The code depends upon the following libraries:
+
+ 1. Boost from http://www.boost.org/
+
+
+Configuration
+-------------
+
+If you have no `configure` script in the top level directory, run `bootstrap`
+to create one using GNU autoconf and automake.  Using bootstrap will require a
+recent version of these tools.
+
+Before compiling, you need to run the provided `configure` script.  Generally,
+just `./configure` will work, but you may wish to provide more parameters.  Run
+`./configure --help` for details.
+
+
+Compilation
+-----------
+
+To compile this code after it has been configured, simply type `make`.
+Afterwards one or more ready-to-use executables should reside in the src
+subdirectory.
+
+
+Testing
+-------
+
+Unit tests can be compiled and run using 'make check'.
