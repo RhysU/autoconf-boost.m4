@@ -1,4 +1,4 @@
-dnl ------------------------------------------------
+jdnl ------------------------------------------------
 dnl Package name and version number
 dnl ------------------------------------------------
 AC_INIT(autoconf-boost, [0.0.1], [rhys.ulerich@gmail.com])
@@ -21,10 +21,16 @@ AC_LANG_PUSH([C])
 AC_PROG_CC
 AX_PROG_CC_C99_CFLAGS
 AX_COMPILER_VENDOR
+if test "x$ax_enable_debug" != "xyes"; then
+    AX_APPEND_COMPILE_FLAGS([-O3])
+fi
 AC_LANG_POP([C])
 AC_LANG_PUSH([C++])
 AC_PROG_CXX
 AX_COMPILER_VENDOR
+if test "x$ax_enable_debug" != "xyes"; then
+    AX_APPEND_COMPILE_FLAGS([-O3])
+fi
 AC_LANG_POP([C++])
 AC_CACHE_SAVE
 
